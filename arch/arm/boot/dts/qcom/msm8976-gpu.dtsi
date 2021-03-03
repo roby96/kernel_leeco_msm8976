@@ -79,11 +79,13 @@
 		 <&clock_gcc_gfx clk_gcc_oxili_timer_clk>,
 		 <&clock_gcc_gfx clk_gcc_oxili_aon_clk>;
 
-	clock-names =   "core_clk", "iface_clk", "mem_clk",
+	         clock-names =   "core_clk", "iface_clk", "mem_clk",
 			"mem_iface_clk", "gtcu_iface_clk",
 			"gtcu_clk", "gtbu_clk", "gtbu1_clk",
 			"rbbmtimer_clk", "aon_clk";
 
+                /* To disable GPU wake up on touch event */
+		qcom,disable-wake-on-touch;
 
 		/* Bus Scale Settings */
 		qcom,gpubw-dev = <&gpubw>;
